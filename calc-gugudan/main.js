@@ -41,7 +41,7 @@ function calculator() {
 
         while (true) {
             num1 = Number(readlineSync.question(`\n첫번째 숫자를 입력하세요: `));
-            if (num1 / 1) {
+            if (num1 / 1 || num1 === 0) {
                 break;
             } else {
                 console.log("\n숫자가 아닙니다. 다시입력해주세요\n")
@@ -65,7 +65,7 @@ function calculator() {
 
         while (true) {
             num2 = Number(readlineSync.question(`두번째 숫자를 입력하세요: `));
-            if (num2 / 1) {
+            if (num2 / 1 || num1 === 0) {
                 break;
             } else {
                 console.log("\n숫자가 아닙니다. 다시입력해주세요\n")
