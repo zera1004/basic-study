@@ -64,7 +64,7 @@ function calculator() {
         }
 
         while (true) {
-            num2 = Number(readlineSync.question(`두번 숫자를 입력하세요: `));
+            num2 = Number(readlineSync.question(`두번째 숫자를 입력하세요: `));
             if (num2 / 1) {
                 break;
             } else {
