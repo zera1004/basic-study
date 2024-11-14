@@ -95,24 +95,24 @@ function calculator() {
                 continue;
             }
         }
-        
+
         if (again == 'n') {
             break;
         }
     }
 }
 
-    // 구구단 출력 함수
-    function printMultiplicationTable() {
-        // 여기에 코드를 작성하세요.
-        console.log("--------------")
-        for (let i = 2; i < 10; i++) {
-            for (let j = 1; j < 10; j++) {
-                console.log(`${i} x ${j} = ${i * j}`)
-            }
-            console.log("--------------")
+// 구구단 출력 함수
+function printMultiplicationTable() {
+    // 여기에 코드를 작성하세요.
+    console.log("--------------")
+    for (let i = 2; i < 10; i++) {
+        for (let j = 1; j < 10; j++) {
+            console.log(`${i} x ${j} = ${i * j}`)
         }
+        console.log("--------------")
     }
+}
 
-    // 프로그램 실행
-    main();
+// 프로그램 실행
+main();
