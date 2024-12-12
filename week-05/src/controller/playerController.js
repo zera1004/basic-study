@@ -24,7 +24,6 @@ export const createPlayer = async (req, res) => {
       return res
         .status(400)
         .json({ error: "name, speed, shooting을 전부 입력해 주세요" });
-    console.log(playerModel.findPlayer(name));
     if (await playerModel.findPlayer(name))
       return res.status(400).json({ error: "이미 존재하는 선수입니다." });
     let value = { name, speed, shooting };
