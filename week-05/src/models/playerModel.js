@@ -12,7 +12,7 @@ export const lookUp = async () => {
 
 // 선수 유무
 export const findPlayer = async (value) => {
-  return await prisma.players.findFirst({
+  return await prisma.players.findUnique({
     where: {
       name: value,
     }
