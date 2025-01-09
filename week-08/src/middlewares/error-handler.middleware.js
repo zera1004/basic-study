@@ -12,17 +12,15 @@ export const errorHandler = (err, req, res, next) => {
   }
 
   if (err.name === 'existedUser') {
-    return res.status(err.status).json({
-      status: err.status,
-      message: err.message,
-    });
+    errorForm(err , res);
   }
 
   if (err.name === 'isPasswordMatched') {
-    return res.status(err.status).json({
-      status: err.status,
-      message: err.message,
-    });
+    errorForm(err , res);
+  }
+
+  if (err.name === 'existedResume') {
+    errorForm(err , res);
   }
 
   // 그 밖의 예상치 못한 에러 처리
@@ -31,3 +29,10 @@ export const errorHandler = (err, req, res, next) => {
     message: '예상치 못한 에러가 발생했습니다. 관리자에게 문의해 주세요.',
   });
 };
+
+function errorForm (err, res) {
+  return res.status(err.status).json({
+    status: err.status,
+    message: err.message,
+  });
+}
